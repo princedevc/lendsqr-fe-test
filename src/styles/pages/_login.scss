@@ -1,0 +1,322 @@
+@use '../utils';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./../../assets/Avenir-Next-Font/AvenirNextLTPro-Bold.otf');
+  }
+  @font-face {
+    font-family: 'Avenir Next Regular';
+    src: url('./../../assets/Avenir-Next-Font/AvenirNextLTPro-Regular.otf');
+  }
+  @font-face {
+    font-family: 'Avenir Next It';
+    src: url('./../../assets/Avenir-Next-Font/AvenirNextLTPro-It.otf');
+  }
+// @import './../../assets/Avenir-Next-Font/Avenir\ Next\ Font.ttf';
+
+$fontty: 10px;
+$topp: 2%;
+$wiegh: 700;
+
+.login {
+    //background-color: $primary;
+    width: 100%; 
+    height: 100vh; 
+    background-color: $white;
+     
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+    @media screen and (max-width:900px) {
+        flex-direction: column;
+     }
+        
+        .left {
+            height: 100%;
+            display: flex;
+            background-color: $whitish;
+            flex: 1;
+            flex-direction: column;            
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            padding-left: 10%; 
+
+            @media screen and (max-width:1040px) {               
+                padding-left: 0%;
+                margin-bottom: 50px;
+             }
+
+            @media screen and (max-width:450px) {
+                height: 40px;
+                flex: none;
+                margin-bottom: 0px;
+             }
+
+            .top {
+                height: 30%;
+                width: 100%;
+                margin-left: 20px;
+
+                display: flex;    
+                align-items: center;
+                // justify-content: center;
+                align-content: center;
+
+                @media screen and (max-width:450px) {
+                    height: fit-content;
+                    display: none;
+                 }
+
+                .logo {
+                    width: 30px;
+                    height: 30px;
+                    margin-top: -3px;
+                    
+                   
+                }
+
+                .companyname {
+                    width: 150px;
+                    height: 40px;
+                    margin-left: 10px;
+
+                    // @media screen and (max-width:450px) {
+                    //     height: 2px;
+                    //  }
+
+                    
+                }
+                
+            }
+
+            .bottom {
+                width: 100%;
+                height: 80%;
+
+                @media screen and (max-width:900px) {
+                    width: 100%;                
+                    height: 50%;
+                    }
+
+                        
+                    @media screen and (max-width:450px) {
+                        height: fit-content;
+                        display: none;
+                     }
+
+                
+            }
+        }
+        .right {
+            height: 100%;
+            display: flex;
+            flex: 1;
+            flex-direction: column;            
+            // align-items: center;
+            // justify-content: center;            
+            padding-right: 10%; 
+
+            @media screen and (max-width:900px) {
+                width: 100%;                
+                padding:10%;
+                }
+
+                @media screen and (max-width:450px) {
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0%;
+                    width: 90%;
+                    flex: none;
+                    }
+           
+            
+            .calss2 {
+                @media screen and (max-width:900px) {
+                   width: 100%;
+                   display: flex;
+                   flex-direction: column;
+                   justify-content: flex-start;
+                    }
+
+                    @media screen and (max-width:450px) {
+                        justify-content: center;
+                        align-items: center;
+                        }
+                
+            .greetings {
+                color: $primary;
+                font-family: "Avenir Next" !important;
+                font-style: bold;
+                width: 183px;
+                height: 55px;
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 55px;
+                letter-spacing: -0.04em;
+                margin-top: 28%;
+
+                @media screen and (max-width:900px) {
+                    margin-top: 0%;
+                    }
+            }
+
+            p {
+                color: $secondary;
+                font-family: "Avenir Next Regular" !important;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 27px;
+                margin-bottom: 10px;
+            }
+            }
+
+            .calss1 {
+                
+
+                form {
+                    position: relative;
+                    font-family: 'DM Sans';
+                    width: 70%;
+                    height: 80%;
+                    margin: 0px;
+                    margin-top: 5%;
+                    padding: 0px;
+
+                    @media screen and (max-width:450px) {
+                        width:300px;
+                        height: fit-content;
+                    }
+
+
+                    input {
+                        font-size: $fontty;
+                        height: 50px;
+                        width: 100%;
+                        background-color: $white;
+                        border: 2px solid rgba(84, 95, 125, 0.15);
+                        border-radius: 5px;
+                        margin: 0px;
+                        padding: 0px;
+                        padding-left: 3%;
+                        top: 0px;
+                        color: $black;
+
+                        @media screen and (max-width:450px) {
+                            height:40px;
+                           padding: 0%;
+                           padding-left: 10px;
+                        }
+
+                    }
+
+                    input::placeholder {
+                        font-family: 'Avenir Next Regular';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 19px;
+                        color: $secondary;
+                        opacity: 0.6;
+
+                        @media screen and (max-width:450px) {
+                        font-size: 10px;
+                        }
+                        
+                    }
+
+                    
+                    .input1 {
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                    }
+
+                    .error {
+                        width: fit-content;
+                        height: fit-content;
+                        font-size: 10px;
+                        line-height: 11px;
+                        color: rgb(200, 4, 4);
+                    }
+
+                    .eyes {
+                        position: absolute;
+                        width: 20px;
+                        height: 13px;
+                        top:39%;
+                        right: 20px;
+                        
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 9999;
+                        cursor: pointer;
+
+                        @media screen and (max-width:900px) {
+                            margin-top: 0%;
+                            top: 40%
+                        }
+
+                        @media screen and (max-width:450px) {
+                            top: 35%
+                         }
+
+                        .eys {
+                            width: 20px;
+                            height: 13px;
+                            color: $buttoncolor;
+                            width: 49.41px;
+                            height: 12.5px;
+                            left: 1215.95px;
+                            top: 460px;
+
+                            font-family: 'Avenir Next Regular';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 12px;
+                            line-height: 16px;
+                            text-align: center;
+                            letter-spacing: 0.1em;
+                            text-transform: uppercase;
+
+                            @media screen and (max-width:900px) {
+                                top: 230px;
+                            }
+                        }
+                    }
+
+                    .forgot {                    
+                        height: 48px;
+                        font-size: 12px;
+                        color: $buttoncolor;
+                        font-family: 'Avenir Next Regular';                    
+                        text-transform: uppercase;
+                        font-style: normal;
+                        font-weight: 800;
+                        line-height: 16px;
+                        text-align: left;
+                        letter-spacing: 0.1em; 
+                    }
+
+                    
+                    .butt{
+                        width: 100%;
+                        height: 48px;
+                        background-color: $buttoncolor;
+                        font-size: 14px;
+                        color: $white;
+                        font-family: 'Avenir Next Regular';                    
+                        text-transform: uppercase;
+                        font-style: normal;
+                        font-weight: 800;
+                        border: 1px solid $buttoncolor;
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
+}

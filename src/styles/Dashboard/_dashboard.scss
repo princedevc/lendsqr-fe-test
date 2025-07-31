@@ -1,0 +1,598 @@
+@use '../utils';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./../../assets/Avenir-Next-Font/AvenirNextLTPro-Bold.otf');
+  }
+  @font-face {
+    font-family: 'Avenir Next Regular';
+    src: url('./../../assets/Avenir-Next-Font/AvenirNextLTPro-Regular.otf');
+  }
+  @font-face {
+    font-family: 'Avenir Next It';
+    src: url('./../../assets/Avenir-Next-Font/AvenirNextLTPro-It.otf');
+  }
+// @import './../../assets/Avenir-Next-Font/Avenir\ Next\ Font.ttf';
+
+.container1 {  
+  position: relative;
+  height:100vh;  
+  background-color: $background;
+  overflow: hidden;
+}
+.navbar {
+    background-color: $white;
+    box-shadow: 3px 0px 20px 0px #00000000;
+    height: 10%;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navigation {  
+  // position: fixed;
+  width: 100%;
+  height: 10% ; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+}
+
+  a, .navbar-nav, .navbar-light .nav-link {
+    color: $primary;
+    &:hover { color: $secondary; }
+  }
+  .navbar-brand {    
+    width: 15%;
+    color: $primary;
+    &:hover { color: $secondary; }
+    position: absolute;
+    left:0;
+
+    @media screen and (max-width:855px) {      
+      left: 2%;
+   }
+
+    .comp {
+        height: 100%;        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+         
+        .logo {
+            width: 18px;
+            height: 18px;
+            margin-top: -3px;
+
+            
+        }
+    
+        .companyname {
+            width: 100px;
+            height: 28px;
+            margin-left: 5px;
+
+            @media screen and (max-width:855px) {   
+              width: 70px;
+              height: 20px;   
+              left: 2%;
+           }
+
+            @media screen and (max-width:450px) {
+              display: none;
+           }
+        }
+     }
+  }
+  .form-center {
+    position: absolute !important;
+    display: flex;
+    left: 15%;
+    right: 65%;
+
+    @media screen and (max-width:855px) {      
+      left: 20%;
+      width: 250px;
+   }
+
+    @media screen and (max-width:450px) {      
+      left: 20%;
+      width: 150px;
+   }
+
+    .search {
+        border-radius: 10px 10px 10px 10px;
+        border-color: #21407d46;
+
+        .search::placeholder {
+            color: $secondary;
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            
+        }
+
+        
+        @media screen and (max-width:550px) {      
+          font-size: 7px;
+       }
+    }
+    
+    .button {
+        position: absolute !important;
+        height:38px;
+        width: 42px;
+        background-color: $buttoncolor;
+        border-color: $buttoncolor;
+        border-radius: 0px 10px 10px 0px;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+
+        @media screen and (max-width:550px) {      
+          height: 24px;
+       }
+    
+        i {
+            color: $white;
+             
+        @media screen and (max-width:550px) {      
+          height: 24;
+       }
+        }
+
+       
+    }
+  }
+  .comp2{
+    position: absolute;
+    right:6%;
+
+    @media screen and (max-width:450px) {
+      right:1%;
+   }
+
+  .tab {
+    
+
+    .docs {        
+        font-family: "Avenir Next Regular" !important;
+        text-decoration: underline;
+        font-size: 16px;
+
+        @media screen and (max-width:630px) {
+          display: none;
+       }
+    }
+
+    .bell1 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 15px;
+        margin-top: 2px;
+        
+        @media screen and (max-width:630px) {
+          display: none;
+       }
+
+        .bell {
+            width: 15px;
+            height: 15px;
+        }
+
+    }
+
+    .userboard {        
+        width: 150px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: center;
+        margin-top: -5px;
+
+        @media screen and (max-width:720px) {
+          width: 100px;
+          text-align: center;
+          vertical-align: middle;
+       }
+
+        @media screen and (max-width:520px) {
+          width: fit-content;
+       }
+        
+        
+
+        .user {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 20px;
+    
+            background: #C4C4C4;
+            border-radius: 100px;
+        }
+
+
+        .userimg {
+            width: 30px;
+            height: 30px;
+            border-radius: 100px;
+        }
+
+        p {
+            width: 150px;  
+            font-family: "Avenir Next Regular" !important; 
+            
+            @media screen and (max-width:720px) {
+              width: fit-content;
+              font-size: 14px;
+           }
+        
+            @media screen and (max-width:520px) {
+              display: none;
+              width: 0px;
+           }                    
+        }
+
+        .vectorhold {
+            width: 30px;
+
+            @media screen and (max-width:720px) {
+              display: none;
+           }
+        
+            @media screen and (max-width:520px) {
+              display: none;
+           }
+
+            .vectorhold {
+                width: 10px;
+            }
+        }
+      }
+    }
+
+  }
+
+  .sidebar1 {
+    display: flex;
+    width: 100%;
+    margin-top: 5%;
+    height: 100%; 
+    overflow: hidden;
+
+    @media screen and (max-width:1550px) {   
+      margin-top: 6%;
+   }
+
+   @media screen and (max-width:1399px) {   
+    margin-top: 7%;
+ }
+
+ @media screen and (max-width:1163px) {   
+  margin-top: 10%;
+}
+//  @media screen and (max-width:950px) {   
+//   display: none;
+// }
+    @media screen and (max-width:450px) {   
+      margin-top: 30%;
+   }
+  }
+
+  .sidebar {  
+    left: 0;  
+    display: flex; 
+    width: 18%;
+    height: 100%;
+    overflow: hidden; 
+
+    @media screen and (max-width:1550px) {   
+      width: 20%;
+   }
+
+   @media screen and (max-width:1399px) {   
+    width: 21%;
+ }
+ @media screen and (max-width:950px) { 
+  width: 12%;
+ }
+ 
+
+
+    .scrollable-content {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      height: 90%;
+      overflow-y: scroll;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 82%;
+    height: 100%;
+    overflow: hidden; 
+  
+  .scrollable-content {
+    width: 100%;
+    height: 90%;
+    overflow-y: scroll;
+    padding: 20px;
+    padding-left: 0px;
+  }
+}
+
+
+.StyledSideNav {
+    //   position: fixed;
+    width: 100%;
+  z-index: 1;
+  background-color: $white; 
+//   overflow-x: hidden;
+  color: $primary;
+//   border-right: 0.5px solid $outling;
+
+}
+
+
+li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 20px;
+    padding: 1rem 0 1.25rem;      
+    color: #ffffff;
+    text-decoration: none;
+}
+
+// .nav-text {        
+//     color: #ffffff;
+//     text-decoration: none;
+//     }
+
+// .item.cName {        
+// text-decoration: none;
+// color: #ffffff;
+// }
+
+.drawerhold {
+  width: 100%;
+  height: 40px;
+  background: $transparent;
+  border-left: 5px solid $transparent;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+  color: $primary;
+  cursor: pointer;
+
+  @media screen and (max-width:1350px) {   
+    font-size: 12px;
+    line-height: 10px;
+ }
+
+  @media screen and (max-width:450px) { 
+    padding-left: 1%;
+   }
+
+
+        .drawer {              
+          color: $secondary;
+          cursor: pointer;
+              // .nav-text {        
+              // color: $primary;
+              // text-decoration: none;
+              // }
+
+      }
+
+      .item.cName:focus {              
+        color: #e10404;
+        text-decoration: none;
+        background: $hovercolor;
+        }
+
+      .drawericon { 
+          margin-top: -3px;
+          margin-right:10px ;             
+          color: $secondary;
+          cursor: pointer;
+            
+  @media screen and (max-width:450px) { 
+    margin-right:50px ;  
+    margin-right: 0px;
+   }
+      }
+
+      // &:active { 
+
+      // }
+}
+.drawerholder {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background: $transparent;
+    border-left: 5px solid $transparent;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: none;
+    color: $primary;
+    cursor: pointer;
+
+    @media screen and (max-width:1350px) {   
+      font-size: 12px;
+      line-height: 10px;
+   }
+    
+  @media screen and (max-width:450px) { 
+    padding-left: 1%;
+   }
+
+    .drawer {              
+        color: $secondary;
+        cursor: pointer;
+
+        
+        @media screen and (max-width:950px) {   
+          display: none;
+        }
+    
+            // .nav-text {        
+            // color: $primary;
+            // text-decoration: none;
+            // }
+    }
+    
+    .item.cName:focus {              
+      color: #e10404;
+      text-decoration: none;
+      background: $hovercolor;
+      }
+
+    .drawericon { 
+        margin-top: -3px;
+        margin-right:10px ;             
+        color: $secondary;
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    &:hover {  
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        background: $hovercolor;
+        border-left: 5px solid $buttoncolor;
+    }
+
+    &:active {      
+      background: $hovercolor;
+      border-left: 5px solid $buttoncolor;
+    }
+}
+
+.drawerholder2 {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  background: $transparent;
+  border-left: 5px solid $transparent;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+  color: $primary;
+  cursor: pointer;
+
+  @media screen and (max-width:1350px) {   
+    font-size: 12px;
+    line-height: 10px;
+ }
+
+  @media screen and (max-width:950px) { 
+    text-align:start;    
+    align-items:flex-start;
+    padding: 0%;
+  }
+  @media screen and (max-width:450px) { 
+  display: none;
+ }
+}
+
+.drawerholder1 {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  background: $transparent;
+  border-left: 5px solid $transparent;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+  color: $primary;
+  cursor: pointer;
+
+  @media screen and (max-width:1350px) {   
+    font-size: 12px;
+    line-height: 10px;
+ }
+    
+  @media screen and (max-width:450px) { 
+    padding-left: 1%;
+   }
+
+  .drawer {              
+      color: $secondary;
+      cursor: pointer;
+      
+      @media screen and (max-width:950px) {   
+        display: none;
+      }
+      
+  @media screen and (max-width:450px) { 
+    padding-left: 0%;
+   }
+  
+          // .nav-text {        
+          // color: $primary;
+          // text-decoration: none;
+          // }
+  }
+  
+  .item.cName:focus {              
+    color: #e10404;
+    text-decoration: none;
+    background: $hovercolor;
+    }
+
+  .drawericon { 
+      margin-top: -3px;
+      margin-right:10px ;             
+      color: $secondary;
+      cursor: pointer;
+  }
+}
