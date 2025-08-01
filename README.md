@@ -9,4 +9,3 @@ Email - lendqr@gmail.com
 Password- passworD1.@
 
 The Tech stack is React, Typescript and SCSS
-https://emmanuel-olajide-lendsqr-fe-test.netlify.app/
