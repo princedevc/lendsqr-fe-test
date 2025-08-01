@@ -14,29 +14,12 @@ import starfull from './../assets/star (2).png';
 import star from './../assets/star (1).png';
 import avatar from './../assets/avatar.png';
 import back from './../assets/backarror.png';
-// https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users
-// https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/:id 
+ 
 
 console.log(fetch('https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users')
 .then((res) => res.json())
 .then((data) => console.log(data)))
 
-// const datium = async function loadIntoTable(url:string, table:any) {
-//   const tableHead = table.querySelector("thead");
-//   const tableBody = table.querySelector("tbody");
-//   const response = await fetch(url);
-//   const {orgName, userName , email, phoneNumber, createdAt, lastActiveDate } = await response.json();
-
-//   tableHead.innerHTML = "<tr></tr>";
-//   tableBody.innerHTML = "<td></td>";
-
-//   for (const headerText of ) {
-    
-    
-//   }
-
-//   loadIntoTable("https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users", document.querySelector("table"))
-// }
 
 
 
